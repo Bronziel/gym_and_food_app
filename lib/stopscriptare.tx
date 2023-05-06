@@ -1,0 +1,19 @@
+It seems like your system is preventing scripts from running. You can bypass this issue by running the following command in your PowerShell as an administrator:
+
+powershell
+Copy code
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+This command will change the execution policy for the current user to RemoteSigned, which allows scripts to run on your system. After executing the command, try running firebase login again.
+
+Please note that changing the execution policy might expose your system to potential security risks. Only do this if you trust the scripts you are running. To revert the execution policy to its default setting, run the following command as an administrator:
+
+powershell
+Copy code
+Set-ExecutionPolicy Restricted -Scope CurrentUser
+Alternatively, you can run the Firebase CLI using the npx command, which should bypass the execution policy issue:
+
+powershell
+Copy code
+npx firebase-tools login
+firebase emulators:start
+PS C:\Users\Daniel\Desktop\appfoodbackupp\leka runt api med apppy\leka runt api\gym_and_food_app> firebase emulators:exec -- command "firebase emulators:stop"
