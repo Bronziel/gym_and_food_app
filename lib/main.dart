@@ -6,6 +6,7 @@ import 'gym_page.dart';
 import 'recipe.dart';
 import 'foodpage.dart';
 import 'foodrecpie.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const MyApp());
