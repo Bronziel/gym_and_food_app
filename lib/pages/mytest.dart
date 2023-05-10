@@ -13,14 +13,17 @@ class _testwidget extends State<testwidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Recepie List')),
-        body: SingleChildScrollView(
-            child: Container(
-                child: SvgPicture.asset(
-          'Images/radlogga.svg',
-        )
-
-                // Add your widget tree here
-                )));
+      appBar: AppBar(title: const Text('Recepie List')),
+      body: Container(
+        child: SingleChildScrollView(
+          child: Container(
+            child: SvgPicture.asset(
+              'Images/radlogga.svg',
+            ),
+            // Add your widget tree here
+          ),
+        ),
+      ),
+    );
   }
 }
