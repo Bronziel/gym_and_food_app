@@ -18,7 +18,7 @@ class _testwidget extends State<testwidget> {
         child: SingleChildScrollView(
           child: Container(
             child: SvgPicture.asset(
-              'Images/radlogga.svg',
+              'Images/radloggaweb.svg',
             ),
             // Add your widget tree here
           ),
