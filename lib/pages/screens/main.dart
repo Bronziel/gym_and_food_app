@@ -38,22 +38,22 @@ class LandingPage extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: FoodButton(),
+            child: const FoodButton(),
           ),
           const SizedBox(height: 16.0),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: RecipelistButton(),
+            child: const RecipelistButton(),
           ),
           const SizedBox(height: 16.0),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: GymButton(),
+            child: const GymButton(),
           ),
           const SizedBox(height: 16.0),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: TestButton(
+            child: const TestButton(
               buttonText: 'Custom Food Button',
               buttonColor: Colors.red,
             ),
