@@ -86,7 +86,7 @@ class FoodButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.all(16.0),
         minimumSize: const Size(double.infinity, 64.0),
-        primary: buttonColor,
+        backgroundColor: buttonColor,
       ),
       child: Text(
         buttonText,
@@ -118,7 +118,7 @@ class RecipelistButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.all(16.0),
         minimumSize: const Size(double.infinity, 64.0),
-        primary: buttonColor,
+        backgroundColor: buttonColor,
       ),
       child: Text(
         buttonText,
@@ -150,7 +150,7 @@ class GymButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.all(16.0),
         minimumSize: const Size(double.infinity, 64.0),
-        primary: buttonColor,
+        backgroundColor: buttonColor,
       ),
       child: Text(
         buttonText,
@@ -182,7 +182,7 @@ class TestButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.all(16.0),
         minimumSize: const Size(double.infinity, 64.0),
-        primary: buttonColor,
+        backgroundColor: buttonColor,
       ),
       child: Text(
         buttonText,
