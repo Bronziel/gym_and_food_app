@@ -53,7 +53,10 @@ class LandingPage extends StatelessWidget {
           const SizedBox(height: 16.0),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: TestButton(),
+            child: TestButton(
+              buttonText: 'Custom Food Button',
+              buttonColor: Colors.red,
+            ),
           ),
         ],
       ),
