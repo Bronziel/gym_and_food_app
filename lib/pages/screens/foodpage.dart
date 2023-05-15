@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'image_page.dart';
+import '../image_page.dart';
 import 'dart:io';
 
 class FoodPage extends StatefulWidget {

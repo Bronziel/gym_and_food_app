@@ -1,7 +1,8 @@
+
 import 'package:flutter/material.dart';
-import 'recipe.dart';
-import 'RecipeDetailsPage.dart';
-import 'recipe_data.dart' show fetchRecipes, getInitialRecipes;
+import '../recipes/recipe.dart';
+import '../recipes/RecipeDetailsPage.dart';
+import '../recipes/recipe_data.dart' show fetchRecipes, getInitialRecipes;
 
 class GymPage extends StatefulWidget {
   const GymPage({Key? key}) : super(key: key);
