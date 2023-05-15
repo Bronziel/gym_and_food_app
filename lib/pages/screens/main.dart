@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'dart:io';
-import 'image_page.dart';
-import 'gym_page.dart';
-import 'recipe.dart';
+import '../image_page.dart';
+import 'recipelistpage.dart';
+import '../recipes/recipe.dart';
 import 'foodpage.dart';
-import 'foodrecpie.dart';
-import 'mytest.dart';
+import 'gym.dart';
+import '../mytest.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
@@ -72,7 +72,7 @@ class LandingPage extends StatelessWidget {
                 primary: Colors.green,
               ),
               child: const Text(
-                'Gym',
+                'recipes',
                 style: TextStyle(fontSize: 36, color: Colors.white),
               ),
             ),
@@ -93,7 +93,7 @@ class LandingPage extends StatelessWidget {
                 primary: Color.fromARGB(255, 175, 116, 76),
               ),
               child: const Text(
-                'Recepielist',
+                'gym',
                 style: TextStyle(fontSize: 36, color: Colors.white),
               ),
             ),
