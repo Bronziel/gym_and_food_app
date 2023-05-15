@@ -158,9 +158,14 @@ class GymButton extends StatelessWidget {
 }
 
 class TestButton extends StatelessWidget {
+  final String buttonText;
+  final Color buttonColor;
+
   const TestButton({
-    super.key,
-  });
+    Key? key,
+    this.buttonText = 'Testwidget',
+    this.buttonColor = Colors.green,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -174,11 +179,11 @@ class TestButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         padding: const EdgeInsets.all(16.0),
         minimumSize: const Size(double.infinity, 64.0),
-        primary: Color.fromARGB(255, 96, 76, 175),
+        primary: buttonColor,
       ),
-      child: const Text(
-        'testwidget',
-        style: TextStyle(fontSize: 36, color: Colors.white),
+      child: Text(
+        buttonText,
+        style: const TextStyle(fontSize: 36, color: Colors.white),
       ),
     );
   }
