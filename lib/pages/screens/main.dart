@@ -38,88 +38,155 @@ class LandingPage extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const FoodPage()),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.all(16.0),
-                minimumSize: const Size(double.infinity, 64.0),
-                primary: Colors.orange,
-              ),
-              child: const Text(
-                'Food',
-                style: TextStyle(fontSize: 36, color: Colors.white),
-              ),
-            ),
+            child: const FoodButton(),
           ),
           const SizedBox(height: 16.0),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const GymPage()),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.all(16.0),
-                minimumSize: const Size(double.infinity, 64.0),
-                primary: Colors.green,
-              ),
-              child: const Text(
-                'recipes',
-                style: TextStyle(fontSize: 36, color: Colors.white),
-              ),
-            ),
+            child: const RecipelistButton(),
           ),
           const SizedBox(height: 16.0),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const foodrecpie()),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.all(16.0),
-                minimumSize: const Size(double.infinity, 64.0),
-                primary: Color.fromARGB(255, 175, 116, 76),
-              ),
-              child: const Text(
-                'gym',
-                style: TextStyle(fontSize: 36, color: Colors.white),
-              ),
-            ),
+            child: const GymButton(),
           ),
           const SizedBox(height: 16.0),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const testwidget()),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.all(16.0),
-                minimumSize: const Size(double.infinity, 64.0),
-                primary: Color.fromARGB(255, 96, 76, 175),
-              ),
-              child: const Text(
-                'testwidget',
-                style: TextStyle(fontSize: 36, color: Colors.white),
-              ),
+            child: const TestButton(
+              buttonText: 'Custom Food Button',
+              buttonColor: Colors.red,
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class FoodButton extends StatelessWidget {
+  final String buttonText;
+  final Color buttonColor;
+
+  const FoodButton({
+    Key? key,
+    this.buttonText = 'Food',
+    this.buttonColor = Colors.orange,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const FoodPage()),
+        );
+      },
+      style: ElevatedButton.styleFrom(
+        padding: const EdgeInsets.all(16.0),
+        minimumSize: const Size(double.infinity, 64.0),
+        backgroundColor: buttonColor,
+      ),
+      child: Text(
+        buttonText,
+        style: const TextStyle(fontSize: 36, color: Colors.white),
+      ),
+    );
+  }
+}
+
+class RecipelistButton extends StatelessWidget {
+  final String buttonText;
+  final Color buttonColor;
+
+  const RecipelistButton({
+    Key? key,
+    this.buttonText = 'recipes',
+    this.buttonColor = Colors.green,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const RecipelistPage()),
+        );
+      },
+      style: ElevatedButton.styleFrom(
+        padding: const EdgeInsets.all(16.0),
+        minimumSize: const Size(double.infinity, 64.0),
+        backgroundColor: buttonColor,
+      ),
+      child: Text(
+        buttonText,
+        style: const TextStyle(fontSize: 36, color: Colors.white),
+      ),
+    );
+  }
+}
+
+class GymButton extends StatelessWidget {
+  final String buttonText;
+  final Color buttonColor;
+
+  const GymButton({
+    Key? key,
+    this.buttonText = 'gym',
+    this.buttonColor = const Color.fromARGB(255, 170, 24, 165),
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const GymPage()),
+        );
+      },
+      style: ElevatedButton.styleFrom(
+        padding: const EdgeInsets.all(16.0),
+        minimumSize: const Size(double.infinity, 64.0),
+        backgroundColor: buttonColor,
+      ),
+      child: Text(
+        buttonText,
+        style: const TextStyle(fontSize: 36, color: Colors.white),
+      ),
+    );
+  }
+}
+
+class TestButton extends StatelessWidget {
+  final String buttonText;
+  final Color buttonColor;
+
+  const TestButton({
+    Key? key,
+    this.buttonText = 'Testwidget',
+    this.buttonColor = Colors.green,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const TestwidgetPage()),
+        );
+      },
+      style: ElevatedButton.styleFrom(
+        padding: const EdgeInsets.all(16.0),
+        minimumSize: const Size(double.infinity, 64.0),
+        backgroundColor: buttonColor,
+      ),
+      child: Text(
+        buttonText,
+        style: const TextStyle(fontSize: 36, color: Colors.white),
       ),
     );
   }
