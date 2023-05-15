@@ -6,6 +6,7 @@ import 'gym_page.dart';
 import 'recipe.dart';
 import 'foodpage.dart';
 import 'foodrecpie.dart';
+import 'mytest.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
@@ -93,6 +94,27 @@ class LandingPage extends StatelessWidget {
               ),
               child: const Text(
                 'Recepielist',
+                style: TextStyle(fontSize: 36, color: Colors.white),
+              ),
+            ),
+          ),
+          const SizedBox(height: 16.0),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const testwidget()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.all(16.0),
+                minimumSize: const Size(double.infinity, 64.0),
+                primary: Color.fromARGB(255, 96, 76, 175),
+              ),
+              child: const Text(
+                'testwidget',
                 style: TextStyle(fontSize: 36, color: Colors.white),
               ),
             ),
