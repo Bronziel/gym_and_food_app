@@ -1,17 +1,16 @@
-
 import 'package:flutter/material.dart';
 import '../recipes/recipe.dart';
 import '../recipes/RecipeDetailsPage.dart';
 import '../recipes/recipe_data.dart' show fetchRecipes, getInitialRecipes;
 
-class GymPage extends StatefulWidget {
-  const GymPage({Key? key}) : super(key: key);
+class RecipelistPage extends StatefulWidget {
+  const RecipelistPage({Key? key}) : super(key: key);
 
   @override
-  _GymPageState createState() => _GymPageState();
+  _RecipelistPageState createState() => _RecipelistPageState();
 }
 
-class _GymPageState extends State<GymPage> {
+class _RecipelistPageState extends State<RecipelistPage> {
   late Future<List<Recipe>> _futureRecipes;
   List<Recipe> initialRecipes = [];
 

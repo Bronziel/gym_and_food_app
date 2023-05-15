@@ -1,16 +1,14 @@
-
-
 import 'package:flutter/material.dart';
 import 'dart:io';
 
-class foodrecpie extends StatefulWidget {
-  const foodrecpie({Key? key}) : super(key: key);
+class GymPage extends StatefulWidget {
+  const GymPage({Key? key}) : super(key: key);
 
   @override
-  _foodrecpieState createState() => _foodrecpieState();
+  _GymPageState createState() => _GymPageState();
 }
 
-class _foodrecpieState extends State<foodrecpie> {
+class _GymPageState extends State<GymPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
