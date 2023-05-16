@@ -31,6 +31,22 @@
         { "name": "Tomatoes", "amount": "2" }
       ],
       "imageUrls": []
+    },
+    {
+      "title": "Watermelon frozen slushie",
+      "description": "Great snack for a warm summer day",
+      "portionSize": 2,
+      "steps": [
+        "Step 1: Do this",
+        "Step 2: Do that",
+        "Step 3: Do something else"
+      ],
+      "ingredients": [
+        { "name": "Watermelon", "amount": "50g" },
+        { "name": "Lemonade", "amount": "3 cloves" },
+        { "name": "Tart cherry juice", "amount": "2" }
+      ],
+      "imageUrls": []
     }
   ]
   
