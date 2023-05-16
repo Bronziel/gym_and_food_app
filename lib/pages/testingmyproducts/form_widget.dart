@@ -9,9 +9,10 @@ class _MyFormWidgetState extends State<MyFormWidget> {
   // Define variables to store form data
   String title = '';
   String description = '';
-  String portionSize = '';
+  int portionSize = 1;
   String steps = '';
   String ingredients = '';
+  String amount = '';
 
   @override
   Widget build(BuildContext context) {
@@ -52,15 +53,33 @@ class _MyFormWidgetState extends State<MyFormWidget> {
                   SizedBox(height: 10),
 
                   // Portion size text field
-                  TextFormField(
-                    decoration: InputDecoration(
-                      labelText: 'Portion Size',
-                    ),
-                    onChanged: (value) {
-                      setState(() {
-                        portionSize = value;
-                      });
-                    },
+                  Row(
+                    children: [
+                      Expanded(
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            labelText: 'Portion Size',
+                          ),
+                          onChanged: (value) {
+                            setState(() {
+                              portionSize = int.tryParse(value) ?? 0;
+                            });
+                          },
+                        ),
+                      ),
+                      Expanded(
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            labelText: 'Portion Size',
+                          ),
+                          onChanged: (value) {
+                            setState(() {
+                              portionSize = int.tryParse(value) ?? 0;
+                            });
+                          },
+                        ),
+                      ),
+                    ],
                   ),
                   SizedBox(height: 10),
 
