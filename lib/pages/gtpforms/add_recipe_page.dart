@@ -116,57 +116,58 @@ class _AddRecipePageState extends State<AddRecipePage> {
                             return 'Please enter a name';
                           }
                           return null;
-                                              },
-                    onSaved: (value) {
-                      _ingredients[i]['name'] = value!;
-                    },
-                  ),
+                        },
+                        onSaved: (value) {
+                          _ingredients[i]['name'] = value!;
+                        },
+                      ),
+                    ),
+                    const SizedBox(width: 8.0),
+                    Expanded(
+                      child: TextFormField(
+                        decoration: const InputDecoration(labelText: 'Amount'),
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter an amount';
+                          }
+                          return null;
+                        },
+                        onSaved: (value) {
+                          _ingredients[i]['amount'] = value!;
+                        },
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(width: 8.0),
-                Expanded(
-                  child: TextFormField(
-                    decoration: const InputDecoration(labelText: 'Amount'),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please enter an amount';
-                      }
-                      return null;
-                    },
-                    onSaved: (value) {
-                      _ingredients[i]['amount'] = value!;
-                    },
-                  ),
+              // Image URLs fields
+              for (int i = 0; i < _imageUrls.length; i++)
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Image URL ${i + 1}'),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter an image URL';
+                    }
+                    return null;
+                  },
+                  onSaved: (value) {
+                    _imageUrls[i] = value!;
+                  },
                 ),
-              ],
-            ),
-          // Image URLs fields
-          for (int i = 0; i < _imageUrls.length; i++)
-            TextFormField(
-              decoration: InputDecoration(labelText: 'Image URL ${i + 1}'),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter an image URL';
-                }
-                return null;
-              },
-              onSaved: (value) {
-                _imageUrls[i] = value!;
-              },
-            ),
-          // Submit button
-          ElevatedButton(
-            onPressed: () {
-              if (_formKey.currentState!.validate()) {
-                _formKey.currentState!.save();
-                _addRecipe();
-                Navigator.pop(context);
-              }
-            },
-            child: const Text('Submit'),
+              // Submit button
+              ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    _formKey.currentState!.save();
+                    _addRecipe();
+                    Navigator.pop(context);
+                  }
+                },
+                child: const Text('Submit'),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
-    ),
-  ),
-);
-
+    );
+  }
+}
