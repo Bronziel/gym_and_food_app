@@ -8,6 +8,7 @@ import 'foodpage.dart';
 import 'gym.dart';
 import '../mytest.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../gtpforms/add_recipe_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -144,7 +145,7 @@ class GymButton extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const GymPage()),
+          MaterialPageRoute(builder: (context) => const AddRecipePage()),
         );
       },
       style: ElevatedButton.styleFrom(
