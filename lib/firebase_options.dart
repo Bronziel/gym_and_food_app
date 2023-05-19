@@ -67,8 +67,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '782681184284',
     projectId: 'cookbook-895e3',
     storageBucket: 'cookbook-895e3.appspot.com',
-    iosClientId:
-        '782681184284-ujgn3nhisd4sdj8lda617cqqq4daltd6.apps.googleusercontent.com',
+    iosClientId: '782681184284-ujgn3nhisd4sdj8lda617cqqq4daltd6.apps.googleusercontent.com',
     iosBundleId: 'com.example.gymAndFoodApp',
   );
 
@@ -78,8 +77,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '782681184284',
     projectId: 'cookbook-895e3',
     storageBucket: 'cookbook-895e3.appspot.com',
-    iosClientId:
-        '782681184284-ujgn3nhisd4sdj8lda617cqqq4daltd6.apps.googleusercontent.com',
+    iosClientId: '782681184284-ujgn3nhisd4sdj8lda617cqqq4daltd6.apps.googleusercontent.com',
     iosBundleId: 'com.example.gymAndFoodApp',
   );
 }

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'dart:io';
-import '../image_page.dart';
-import 'recipelistpage.dart';
-import '../recipes/recipe.dart';
-import 'foodpage.dart';
-import 'gym.dart';
-import '../mytest.dart';
+import 'pages/image_page.dart';
+import 'pages/screens/recipelistpage.dart';
+import 'pages/recipes/recipe.dart';
+import 'pages/screens/foodpage.dart';
+import 'pages/screens/gym.dart';
+import 'pages/mytest.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../gtpforms/add_recipe_page.dart';
+import 'pages/gtpforms/add_recipe_page.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

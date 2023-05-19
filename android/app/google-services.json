@@ -29,6 +29,13 @@
             {
               "client_id": "782681184284-8i32a2im8epa2vbnq36batdolfll4btg.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "782681184284-ujgn3nhisd4sdj8lda617cqqq4daltd6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.gymAndFoodApp"
+              }
             }
           ]
         }
