@@ -65,3 +65,13 @@ List<Recipe> getInitialRecipes() {
 
   return initialRecipes;
 }
+Future<void> main() async{
+  widgetsflutterbinding.ensureinitilaiszed();
+  
+await Firebase.initializeApp(
+  options: DefaultFirebaseOptions.currentPlatform,
+);
+    run app(const myapp());
+  
+}
+

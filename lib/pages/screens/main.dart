@@ -9,9 +9,50 @@ import 'gym.dart';
 import '../mytest.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../gtpforms/add_recipe_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(App());
+}
+
+class App extends StatelessWidget {
+  final Future<FirebaseApp> _initialization = Firebase.initializeApp();
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder(
+      future: _initialization,
+      builder: (context, snapshot) {
+        if (snapshot.hasError) {
+          return SomethingWentWrong();
+        }
+        if (snapshot.connectionState == ConnectionState.done) {
+          return const MyApp();
+        }
+        return Loading();
+      },
+    );
+  }
+}
+
+class SomethingWentWrong extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(
+          child: Text('Something went wrong during Firebase initialization.')),
+    );
+  }
+}
+
+class Loading extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(child: CircularProgressIndicator()),
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -26,6 +67,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// ... rest of your code ...
 
 class LandingPage extends StatelessWidget {
   const LandingPage({Key? key}) : super(key: key);

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "782681184284",
+    "project_id": "cookbook-895e3",
+    "storage_bucket": "cookbook-895e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:782681184284:android:b4c3aa140d873ae52527d9",
+        "android_client_info": {
+          "package_name": "com.example.gym_and_food_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "782681184284-8i32a2im8epa2vbnq36batdolfll4btg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB2Kt7IIxZsQ75xk6JO4_89NB27b3crvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "782681184284-8i32a2im8epa2vbnq36batdolfll4btg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

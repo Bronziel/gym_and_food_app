@@ -45,3 +45,4 @@ app.*.map.json
 
 #Daniels api key
 cookbook-895e3-firebase-adminsdk-6w388-af770975ca.json
+node_modules
